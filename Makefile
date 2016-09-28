@@ -1,24 +1,23 @@
 # variables
 IN = paper.md
-OUT = paper
-sections = paper/sections/
-mds = $(wildcard 0*.md)
+OUT = paper.html
 
-# declaring phony target
+# wildcard
+MDS = $(wildcard paper/sections/*.md) 
+
+# declaring phony targets
 .PHONY: all clean
 
 # all
-all: $(OUT).html $(IN)
+all: paper.html paper.md
 
-# from markdown to html
-$(OUT).html: $(IN)
-	cd paper; pandoc $< -s -o $@
+# from markdown to html with automatic variable
+$(OUT): $(IN)
+	pandoc paper/$< -s -o paper/$@
 
-# is there an easier way? cd or wildcards?
-$(IN): $(sections)00-abstract.md $(sections)01-introduction.md $(sections)02-discussion.md $(sections)03-conclusions.md
-	cd $(sections); pandoc $(mds) -s -o $@
+# creating paper.md from .md files in section with automatic variable
+$(IN): $(MDS)
+	cat $(MDS) > paper/$@
 
-
-# did this do anything?
 clean:
-	cd paper; rm -f $(OUT).html
+	cd paper; rm -f $(OUT) $(IN)
