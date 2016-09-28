@@ -1,5 +1,3 @@
 ## Introduction
 
-Do I make branches for sections and paper?
-How should I download the png files or can I just drag them over?
-what do I ignore in .gitignore
+The purpose of this project is to get you familiar with using the computational tools learned in class and to create your first reproducible project. I will guide you closely as you create your own github local respository and advise the difficulties I have encountered in my experience with this project. In the next section, I will discuss about all the tools used and its roles in the reproducible workflow. By providing illustrations of the computational tools and the exact code I used to produce this project, you will find it very easy to continue on creating future reproducible projects on your own.
