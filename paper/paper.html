@@ -12,70 +12,74 @@
 <h2 id="stat-159-fall-2016-prof.-sanchez">Stat 159, Fall 2016, Prof. Sanchez</h2>
 <h3 id="timothy-park-sid-23674763">Timothy Park (SID: 23674763)</h3>
 <hr />
-<h3 id="abstract">Abstract</h3>
 <div class="figure">
 <img src="../images/stat159-logo.png" />
 
 </div>
+<h3 id="abstract">Abstract</h3>
 <p>Project 1 is the first project for Professor Sanchez's Statistics 159 class in the Fall 2016 term. This project will provide you with a step-by-step process in creating your first reproducible project using the following computational tools: bash, markdown, pandoc, Git, Github, Make, and Sublime (or any text editor of your choice).</p>
 <hr />
 <h3 id="introduction">Introduction</h3>
 <p>The purpose of this project is to get you familiar with using the computational tools learned in class and to create your first reproducible project. I will guide you closely as you create your own github local respository and note the difficulties I have encountered in my experience with this project. In the following discussion section, I will explain about all the tools used and its roles in the reproducible workflow. By providing illustrations of the computational tools and the exact code I used to produce this project, you will find it very easy to continue on creating future reproducible projects on your own.</p>
 <hr />
 <h3 id="discussion">Discussion</h3>
-<p>The first computational tool every statistician or computer programmer needs to know is bash. Bash is short for Bourne Again Shell and is the shell for the GNU operating system. All shells including bash require either a terminal emulator or command line interpreter. Inside the shell contains the kernel. The kernel is the core of Unix-like operating systems, and it is responsible for allocating memory and time to program. The user types in commands into the Terminal that are handled by shell, which then translates our commands interpretable by the kernel. These commands are executed, and the command line is reset again. First, open up terminal by searching through your applications folder. A screen will pop up, displaying the command line within the bash interface. The default present working directory for bash is the user folder, which often includes the following: Desktop, Documents, Downloads, Music, and etc. In this project, we will create a folder called “stat159-fall2016-project1” and initialize a git repository.</p>
+<p>The first computational tool every statistician or computer programmer needs to know is bash. Bash is short for Bourne Again Shell and is the shell for the GNU operating system. All shells including bash require either a terminal emulator or command line interpreter. Inside the shell contains the kernel. The kernel is the core of Unix-like operating systems, and it is responsible for allocating memory and time to program. The user types in commands into the Terminal that are handled by shell, which then translates our commands interpretable by the kernel. These commands are executed, and the command line is reset again. First, open up terminal by searching through your applications folder. A screen will pop up, displaying the command line within the bash interface. The default present working directory for bash is the user folder, which often includes the following: Desktop, Documents, Downloads, Music, and etc. In this project, we will create a folder called <em>stat159-fall2016-project1</em> and initialize a git repository.</p>
 <ul>
 <li>Locate what your present working directory is by the pwd command.
 <ul>
-<li>pwd</li>
+<li><code>pwd</code></li>
 </ul></li>
 <li>View all the files and folders in your current working directory by typing in the ls command.
 <ul>
-<li>ls</li>
+<li><code>ls</code></li>
 </ul></li>
 <li>Change the working directory by using the cd command following the directory you want to change into. In this case, change into the Desktop directory.
 <ul>
-<li>cd Desktop</li>
+<li><code>cd Desktop</code></li>
 </ul></li>
-<li>To create a folder called “stat159-fall2016-project1”, use the mkdir command following the name of the folder
+<li>To create a folder called <em>stat159-fall2016-project1</em>, use the mkdir command following the name of the folder
 <ul>
-<li>mkdir stat159-fall2016-project1</li>
+<li><code>mkdir stat159-fall2016-project1</code></li>
 </ul></li>
 <li>Change your working directory into this new folder
 <ul>
-<li>cd stat159-fall2016-project1</li>
+<li><code>cd stat159-fall2016-project1</code></li>
 </ul></li>
 </ul>
 <div class="figure">
 <img src="../images/github-logo.png" />
 
 </div>
-<p>Before initializing any Git repository, you first need to understand the workings of GitHub. GitHub is a collaboration platform built on top of Git, a free open source distributed version control system. This platform facilitates the collaboration and sharing of files and projects to the public or to private groups. You will be able to start your own data science projects in your own team and contribute to the open source movement. Open source is a way for non-collaborators to reproduce or replicate your experiment, and becoming a GitHub/Git expert is the first step to an open source world. In this project, you will use GitHub to create your own remote repository where you and your collaborators, using Git, can make changes. push them remotely to GitHub, and collaborate with your team easily with multiple versions of each change.</p>
+<p>Before initializing any Git repository, you first need to understand the workings of GitHub. <strong>GitHub</strong> is a collaboration platform built on top of Git, a free open source distributed version control system. This platform facilitates the collaboration and sharing of files and projects to the public or to private groups. You will be able to start your own data science projects in your own team and contribute to the open source movement. Open source is a way for non-collaborators to reproduce or replicate your experiment, and becoming a GitHub/Git expert is the first step to an open source world. In this project, you will use GitHub to create your own remote repository where you and your collaborators, using Git, can make changes. push them remotely to GitHub, and collaborate with your team easily with multiple versions of each change.</p>
 <div class="figure">
 <img src="../images/git-logo.png" />
 
 </div>
-<p>Now, we will learn about the commonly-used version control system called Git. A version control system keep tracks of changes over time, allows you to track your progress, allows you to revert to earlier versions, and makes it easier to collaborate with others all in a virtual project setting. You can track your changes on various files and directories and work with others on the same file (automatically creating different versions). Git is a distributed version control system that can create both a local and remote repository. You can initialize a git repository at home, pull the work from the centralized repository on the GitHub project site, work on the project at home without the internet, and finally push all the changes to the central repository once you are done.</p>
+<p>Now, we will learn about the commonly-used version control system called <strong>Git</strong>. A version control system keep tracks of changes over time, allows you to track your progress, allows you to revert to earlier versions, and makes it easier to collaborate with others all in a virtual project setting. You can track your changes on various files and directories and work with others on the same file (automatically creating different versions). Git is a distributed version control system that can create both a local and remote repository. You can initialize a git repository at home, pull the work from the centralized repository on the GitHub project site, work on the project at home without the internet, and finally push all the changes to the central repository once you are done.</p>
 <ul>
-<li>If you are using git for the first time, you should configure your git information (on the user level) using the “git config” command.
+<li>If you are using git for the first time, you should configure your git information (on the user level) using the <code>git config</code> command.
 <ul>
-<li>git config --global user.name “Timothy Park”</li>
-<li>git config --global user.email timothypark713@gmail.com</li>
-<li>git config --global color.ui “auto”</li>
+<li><code>git config --global user.name “timothy-park”</code></li>
+<li><code>git config --global user.email timothypark713@gmail.com</code></li>
+<li><code>git config --global color.ui “auto”</code></li>
 </ul></li>
-<li>Initialize a local git repository by typing in git init. This would create a hidden file called .git that would keep track of all changes in the directory it is located in. git init</li>
-<li>To create a remote git repository, you have to log into your account on github.com and click on “new repository” in the drop down list from the <em>+</em> icon. This action would direct you to a page to customize the settings of your new remote repository. For this project, we want the repository to be named the same as your local repository, to be public, and initialized with a README.md file. A README file is a text file that contains information about the software program including, but not limited to: installation of the program, use of the functions in the program, and the main goal of the program as a whole.</li>
-<li>To connect the folder “stat159-fall2016-project1” to the remote repository, click on the green button named “Clone or download”. You will see a link in either a SSH or HTTP format. SSH is used for security purposes, but for this project, we will use the HTTP link. Copy the link and use the following command to link the folder to this remote repository. The argument “origin” shown below can be of any name; it is basically your own personal alias for that specific remote respository. Note: your present working directory must be in the local repository you initialized earlier
+<li>Initialize a local git repository by typing in <code>git init</code>. This would create a hidden file called .git that would keep track of all changes in the directory it is located in.
 <ul>
-<li>git remote add origin http://...</li>
+<li><code>git init</code></li>
 </ul></li>
-<li>Since a README.md was created, you need to pull the files from the remote repository to have everything in sync. The master argument in the command below pulls the contents from the main branch called “master” of the remote repository.
+<li>To create a remote git repository, you have to log into your account on github.com and click on <em>new repository</em> in the drop down list from the <em>+</em> icon. This action would direct you to a page to customize the settings of your new remote repository. For this project, we want the repository to be named the same as your local repository, to be public, and initialized with a README.md file. A README file is a text file that contains information about the software program including, but not limited to: installation of the program, use of the functions in the program, and the main goal of the program as a whole.</li>
+<li>To connect the folder <em>stat159-fall2016-project1</em> to the remote repository, click on the green button called <em>Clone or download</em>. You will see a link in either a SSH or HTTP format. SSH is used for security purposes, but for this project, we will use the HTTP link. Copy the link and use the following command to link the folder to this remote repository. The argument <em>origin</em> shown below can be of any name; it is basically your own personal alias for that specific remote respository. Note: your present working directory must be in the local repository you initialized earlier
 <ul>
-<li>git pull origin master</li>
+<li><code>git remote add origin https://github.com/timothy-park/stat159-fall2016-project1.git</code></li>
+</ul></li>
+<li>Since a README.md was created, you need to pull the files from the remote repository to have everything in sync. The master argument in the command below pulls the contents from the main branch called <em>master</em> of the remote repository.
+<ul>
+<li><code>git pull origin master</code></li>
 </ul></li>
 </ul>
-<p>After completing these commands, your remote and local repositories are now in sync and up-to-date. You can check this by typing in “git status”. If you make any changes in your local repository, typing in “git status” will report to you the following files need to be added to the staging area. Git records changes in a 3-step process. When the user makes any change to a file in the git-initialized repository, the .git file will track these changes. The user must use the “git add” command to take a “snapshot” of these changes. This action will bring all the recorded changes to the staging area, which then will be converted to a “stored photo” by typing in the “git commit” command. These commits can be pushed to the centralized repository on Github by the “git push origin master” command. * Adding a file called files.txt to the staging area * git add files.txt * Committing a file to your local repository with a message describing the main changes * git commit files.txt –m “insightful message” * Checking your log/history of your commits * git log * Push all these changes to your remote repository * git push origin master</p>
-<p>Since we have finally initialized a git repository remotely and locally, let us download some png images found on Gaston Sanchez's Project 1 folder in his Stat 159 repository. Instead of downloading them manually, use the curl command in the terminal to download their outputs in the current directory.</p>
+<p>After completing these commands, your remote and local repositories are now in sync and up-to-date. You can check this by typing in <code>git status</code>. If you make any changes in your local repository, typing in <code>git status</code> will report to you the following files need to be added to the staging area.</p>
+<p>Git records changes in a 3-step process. When the user makes any change to a file in the git-initialized repository, the .git file will track these changes. The user must use the “git add” command to take a <em>snapshot</em> of these changes. This action will bring all the recorded changes to the staging area, which then will be converted to a <em>stored photo</em> by typing in the <code>git commit</code> command. These commits can be pushed to the centralized repository on Github by the <code>git push origin master</code> command. * Adding a file called files.txt to the staging area * <code>git add files.txt</code> * Committing a file to your local repository with a message describing the main changes * <code>git commit –m “insightful message”</code> * Checking your log/history of your commits * <code>git log</code> * Push all these changes to your remote repository * <code>git push origin master</code></p>
+<p>Since we have finally initialized a git repository remotely and locally, let us download some png images found on Gaston Sanchez's Project 1 folder in his Stat 159 repository. Instead of downloading them manually, use the <code>curl</code> command in the terminal to download their outputs in the current directory.</p>
 <pre><code>curl -o git-logo.png https://raw.githubusercontent.com/timothy-park/stat159-fall-2016/master/projects/proj01/images/git-logo.png
 
 curl -o github-logo.png https://raw.githubusercontent.com/timothy-park/stat159-fall-2016/master/projects/proj01/images/github-logo.png
@@ -85,29 +89,38 @@ curl -o pandoc-logo.png https://raw.githubusercontent.com/timothy-park/stat159-f
 curl -o markdown-logo.png https://raw.githubusercontent.com/timothy-park/stat159-fall-2016/master/projects/proj01/images/markdown-logo.png
 
 curl -o stat159-logo.png https://raw.githubusercontent.com/timothy-park/stat159-fall-2016/master/projects/proj01/images/stat159-logo.png</code></pre>
-<p>Since the present working directory is in the &quot;stat159-fall2016-project1&quot; folder, the png images were downloaded there. We should now create a new directory called &quot;images&quot; and move these files there using the mv command in the terminal. The following command will use a wildcard to select all png images.</p>
-<p>mkdir images mv *.png images</p>
-<p>Since the files in the main directory have been changed, let us check how git handles with these changes. We type in &quot;git status&quot; to check if changes needed to be added to the staging area and thereafter can be committed to git.</p>
-<p>git status</p>
-<p>We can see that this command provided a list of the untracked files in the directory. Type in &quot;git add *.png&quot;, which would put all png files to the staging area. Then, &quot;git commit -m &quot;create a folder called images and moved the png files into the folder&quot;&quot; This commit is stored in the git log and the remote repository is changed until the user types in the following command: git push origin master. This command would push all the committed changes to the master branch in the origin, which is connected to the project's repository. Looking at the remote repository on GitHub, the directory is now updated and in sync with the local directory on your desktop.</p>
-<p>Now, let us create a new directory called paper. In this directory, we will create an html and markdown file using Makefile (to be discussed shortly). In the paper directory, create another directory called sections, which would include the main content of your project. We will create four text files in markdown format with the following titles: 00-abstract.md, 01-introduction.md, 02-discussion.md, 03-conclusions.md.</p>
-<p>mkdir paper cd paper mk sections cd sections</p>
-<p>To create a text file, you can use any text editor. In this project, I will use the sublime text editor. I type in &quot;subl 00-abstract.md&quot; to create the abstract text file. You can use any text editor of your preference. For every text file you create, you have to type something into each and save it. The result will show the markdown files in your present working directory, which is named &quot;sections&quot;.</p>
-<p>subl 00-abstract.md subl 01-introduction.md subl 02-discussion.md subl 03-concludions.md</p>
+<p>Since the present working directory is in the <em>stat159-fall2016-project1</em> folder, the png images were downloaded there. We should now create a new directory called <em>images</em> and move these files there using the mv command in the terminal. The following command will use a wildcard to select all png images.</p>
+<pre><code>mkdir images
+mv *.png images</code></pre>
+<p>Since the files in the main directory have been changed, let us check how git handles with these changes. We type in <code>git status</code> to check if changes needed to be added to the staging area and thereafter can be committed to git.</p>
+<p><code>git status</code></p>
+<p>We can see that this command provided a list of the untracked files in the directory. Type in <code>git add *.png</code>, which would put all png files to the staging area. Then, the command <code>git commit -m &quot;create a folder called images and moved the png files into the folder&quot;</code> This commit is stored in the git log and the remote repository is changed until the user types in the following command: <code>git push origin master</code>. This command would push all the committed changes to the master branch in the origin, which is connected to the project's remote repository. Looking at the remote repository on GitHub, the directory is now updated and in sync with the local directory on your desktop.</p>
+<p>Now, let us create a new directory called paper. In this directory, we will create an html and markdown file using Makefile (to be discussed shortly). In the paper directory, create another directory called sections, which would include the main content of your project. We will create four text files in markdown format with the following titles: 00-abstract.md, 01-introduction.md, 02-discussion.md, and 03-conclusions.md.</p>
+<pre><code>mkdir paper
+cd paper
+mk sections
+cd sections</code></pre>
+<p>To create a text file, you can use any text editor. In this project, I will use the sublime text editor. I type in <code>subl 00-abstract.md</code> onto the command line to create the abstract text file. You can use any text editor of your preference. For every text file you create, you have to type something into each file and save it. The result will show the markdown files in your present working directory, which is named <em>sections</em>.</p>
+<pre><code>subl 00-abstract.md
+subl 01-introduction.md
+subl 02-discussion.md
+subl 03-concludions.md</code></pre>
 <div class="figure">
 <img src="../images/markdown-logo.png" />
 
 </div>
-<p>Markdown is a lightweight markup language that can be easily converted into HTML and other common formats. Markdown is very much known for its easy-to-read formatting syntax. You can write your markdown-formatted content in another basic text editor like TextEdit for Mac and Notepad on Windows.</p>
-<p>To finalize your report, we are going to use a Makefile, one of the effective ways to compile your source code files. A Makefile is a unique file that works with the &quot;make&quot; utility, organizing and building your projects. Go through a tutorial on Makefile to know its functions and how it works, but the main point of it is the facilitate the project's reproducibility. By just typing &quot;make&quot; into the terminal, the project's html and markdown file are newly created. If you type in make clean, the html and markdown outputs will be deleted and the project will be made clean without the finalized reports.</p>
-<p>make make clean</p>
-<p>Within the Makefile, you can have variables, automatic variables, and wildcards for purposes of changing your file output names or specifically subsetting a list of files in a selected directory. The phon variables, all and clean, are just how makefile outputs or erases files, respectively. In addition, we use the cat function in the command to compile the 4 source files into a markdown file called paper.md.</p>
+<p><strong>Markdown</strong> is a lightweight markup language that can be easily converted into HTML and other common formats. Markdown is known for its easy-to-read formatting syntax. You can write your markdown-formatted content in another basic text editor like TextEdit for Mac and Notepad on Windows. You can format your code and comments in various ways that is both easily read in the source code and the output file.</p>
+<p>To finalize your report, we are going to use a <strong>Makefile</strong>, one of the effective ways to compile your source code files. A Makefile is a unique file that works with the <em>make</em> utility, which, in synergy, organizes and builds your projects. Go through a tutorial for Makefile to know its functions and how it works, but the main point of Makefile is to facilitate the project's reproducibility. By just typing <code>make</code> into the terminal, the project's html and markdown file are newly created. If you type in <code>make clean</code>, the html and markdown outputs will be deleted and the project will be made clean without the finalized reports.</p>
+<pre><code>make
+make clean</code></pre>
+<p>Within the Makefile, you can have variables, automatic variables, and wildcards for purposes of changing your file output names or specifically subsetting a list of files in a selected directory. The phony variables, all and clean, are just how makefile outputs or erases files, respectively. In addition, we use the cat function in the command to compile the 4 source files created earlier into a markdown file called paper.md.</p>
+<p>Make sure to place your Makefile in the main directory <em>stat159-fall2016-project1</em>. The Makefile should produce the mardkdown and paper outputs in the paper directory.</p>
 <div class="figure">
 <img src="../images/pandoc-logo.png" />
 
 </div>
-<p>To create an html format of paper.md, we will use a command-line tool called Pandoc. There is no graphical user interface for Pandoc, but we can use the terminal to run it. Pandoc is an extremely useful tool since it fills in much of the unfamiliar syntax used in Markdown files, and can then be used to easily convert a markdown file to html/pdf/latex, vice-versa. We use the following code to convert paper.md to paper.html</p>
-<p>pandoc paper/paper.md -s -o paper/paper.html</p>
+<p>To create an html format of paper.md, we will use a command-line tool called <strong>Pandoc</strong>. There is no graphical user interface for Pandoc, but we can use the terminal to run it. Pandoc is an extremely useful tool since it fills in much of the unfamiliar syntax used in Markdown files and can then be used to easily convert a markdown file to html/pdf/latex, and vice-versa. We use the following code to convert paper.md to paper.html</p>
+<pre><code>pandoc paper/paper.md -s -o paper/paper.html</code></pre>
 <p>Once you have updated the four sections with valuable content, save it, git add them to the staging area, commit them to git using meaningful messages, and finally push all changes to the GitHub remote repository. Play around with make and make clean to see if it works and to understand how Makefile facilitates the reproducibility of the project.</p>
 <hr />
 <h3 id="conclusions">Conclusions</h3>
