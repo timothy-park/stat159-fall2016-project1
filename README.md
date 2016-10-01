@@ -1,4 +1,4 @@
-# Project-title: stat159-fall2016-project1
+# stat159-fall2016-project1
 ## Author: Timothy Park
 
 Images: contains png images used to illustrate the contents of the markdown files in the paper/sections folder.
